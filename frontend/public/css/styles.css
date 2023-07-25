@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#root{
+    height: 100vh;
+}    
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #ff9900;
+}
+
+  
+/* itinerary display section */
+
+/* .itinerary-buttons{
+    text-align: center;   
+}
+
+.itinerary-buttons button{
+    background-color: var(--primary-color);
+    margin: 10px 30px;
+    border: 2px black solid;  
+    color: white;
+}
+
+.itinerary-card {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 400px;
+    margin: 16px;
+    float: left;
+}
+/* .itinerary-name{ */
+    /* text-align: right; */
+/* } */
+/* .itinerary-card h1 { 
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+}
+
+.itinerary-card .heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itinerary-card .options{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-solid{
+    margin: 4px;
+}
+
+.itinerary-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.itinerary-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.itinerary-card li {
+    margin-bottom: 5px;
+}
+
+.itinerary-card button{
+    background-color: white;
+    position: relative;
+    float: right;
+    margin-right: 10p   x;
+    color: #222222;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.completed{
+    background-color:#ff9900;
+} */
+
+/* activities */
+.drag-handles{
+
+}
+/* activities */
+
+/* itinerary display section */
+
+
+/* main sectionn */
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+
+input {
+    padding: 5px 10px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;    
+}
+
+/* main section */
+
+
+
+
+/* activity section */
+#activity-form{
+   text-align: center; 
+   padding: 0 20%;
+}
+
+#activity-form input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+#field-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+}
+
+.add-btn{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+}
+
+.buttons{
+    margin: 20px 0;
+}
+
+.button{
+    color: white;
+    height: 100%;
+    width: 100px;
+    border-radius: 5px;      
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* activity section */
+
+/* main section */

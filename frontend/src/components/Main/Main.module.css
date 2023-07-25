@@ -1,0 +1,31 @@
+#itinerary-section{
+    text-align: center;    
+    display: block;
+    height: 450px;
+    width: 40%;
+    /* background-color: aqua; */
+}
+
+#section-header{
+    height: 20%;
+}
+
+#section-content input{
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.add-itinerary{
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+}
+
+
+/* activity.jsx */
+
+/* activity.jsx */
