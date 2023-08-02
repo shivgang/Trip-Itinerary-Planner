@@ -41,27 +41,27 @@ function Main(){
             return;
         }
         // Store the itinerary in local storage
-        // let itinerarys = localStorage.getItem("itineraries");
-        // if (itinerarys) {
-        //     itinerarys = JSON.parse(itinerarys);
-        //     itinerarys.push(itinerary);
-        //     localStorage.setItem("itineraries", JSON.stringify(itinerarys));
-        // } else {
-        //     let itinerarys = [itinerary];
-        //     localStorage.setItem('itineraries', JSON.stringify(itinerarys));
-        // }
+        let itinerarys = localStorage.getItem("itineraries");
+        if (itinerarys) {
+            itinerarys = JSON.parse(itinerarys);
+            itinerarys.push(itinerary);
+            localStorage.setItem("itineraries", JSON.stringify(itinerarys));
+        } else {
+            let itinerarys = [itinerary];
+            localStorage.setItem('itineraries', JSON.stringify(itinerarys));
+        }
 
-        // itinerary.type = "insert";  
-        // let modifications = localStorage.getItem("modifications");
-        // if (modifications) {
-        //     modifications = JSON.parse(modifications);
-        //     modifications.push(itinerary);
-        //     localStorage.setItem("modifications", JSON.stringify(modifications));
-        // } else {
-        //     let modifications = [itinerary];
-        //     localStorage.setItem('modifications', JSON.stringify(modifications));
-        // }
-        // getItineraries();
+        itinerary.type = "insert";  
+        let modifications = localStorage.getItem("modifications");
+        if (modifications) {
+            modifications = JSON.parse(modifications);
+            modifications.push(itinerary);
+            localStorage.setItem("modifications", JSON.stringify(modifications));
+        } else {
+            let modifications = [itinerary];
+            localStorage.setItem('modifications', JSON.stringify(modifications));
+        }
+        getItineraries();
 
         itinerary.googleId = user.sub;
         // console

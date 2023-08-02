@@ -29,8 +29,12 @@ router.post('/', async (req, res) => {
 
 
 router.get("/history",async (req,res) =>{
-    const email = passport.getUserEmail();
+    console.log(2);
+    const email = await passport.user;
+    console.log(1);
     console.log(email);
+    console.log(1);
+    res.json({email:email});
 });
 
 module.exports = router ;

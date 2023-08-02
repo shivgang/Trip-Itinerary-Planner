@@ -4,15 +4,27 @@ import { useState } from "react";
 import Itinerary from "./Itinerary";
 import { useNavigate } from "react-router-dom";
 import styles from './Itineraries.module.css';
+import axios from "axios";
+
 
 function Itineraries(){    
     const[itineraries,setItineraries] = useState([]);
     const navigate = useNavigate();
     // const [arr,setArr] = useState([]);
 
-    function getItineraries(){
+    async function getItineraries(){
         const savedItineraries = JSON.parse(localStorage.getItem('itineraries')) || [];
         setItineraries(savedItineraries);
+
+        // console.log("out");
+        // await axios.get('http://localhost:5000/itineraries/history').then((response)=>{
+        //     console.log(10);
+        //     console.log(response.data);
+        //     console.log(10);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // });
+        // console.log("in");
         // let a = [];
         // for(let i=0;i<savedItineraries.length;i++)  a.push(i);
         // setArr(a);
@@ -131,78 +143,3 @@ function Itineraries(){
 }
 
 export default Itineraries;
-
-
-
-// import React from "react";
-// import { useEffect } from "react";
-
-// function initializeApp(event) {
-//     event.preventDefault();
-//     // Retrieve saved itineraries from local storage
-//     const savedItineraries = JSON.parse(localStorage.getItem('itineraries')) || [];
-//     const itineraryContainer = document.querySelector('#itinerary-display');
-
-//     (savedItineraries || []).forEach((itinerary) => {
-//         const itineraryCard = document.createElement('div');
-//         itineraryCard.classList.add('itinerary-card');
-
-//         const nameElement = document.createElement('h1');
-//         // nameElement.textContent = itinerary.name;
-//         nameElement.innerHTML = `
-//                 <div class="itinerary-name">    
-//                     ${itinerary.name}
-//                 </div>
-//                 <div class="options">
-
-//                     <button>
-//                         <i class="fa-solid fa-trash"></i>
-//                     </button>
-//                     <button>
-//                         <i class="fa-solid fa-pen"></i>
-//                     </button>
-//                 </div>
-//         `;
-//         itineraryCard.appendChild(nameElement);
-
-
-//         const datesElement = document.createElement('p');
-//         datesElement.textContent = `Date: ${itinerary.date}`;
-//         itineraryCard.appendChild(datesElement);
-
-//         const activitiesElement = document.createElement('ul');
-//         (itinerary.activities || []).forEach((activity) => {
-//             const activityName = activity.name;
-//             const activityLocation = activity.location;
-//             const activityTime = activity.time;
-
-//             activitiesElement.innerHTML += `
-//             <p><strong>Activity Name:</strong> ${activityName}</p>
-//             <p><strong>Location:</strong> ${activityLocation}</p>
-//             <p><strong>Time:</strong> ${activityTime}</p>
-//             `;  
-//         }); 
-//         itineraryCard.appendChild(activitiesElement);
-
-//         itineraryContainer.appendChild(itineraryCard);
-//     });
-
-// }
-
-// function Display(){
-    
-//     useEffect(() => {        
-//         window.addEventListener('load', initializeApp);
-//     });
-    
-//     return  (
-//         <>
-//         <section id="itinerary-display">
-//             {/* <!-- Itinerary display elements will be added here --> */}
-            
-//         </section>
-//         </> 
-//     );
-// }
-
-// export default Display;
